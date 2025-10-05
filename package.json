@@ -2,8 +2,7 @@
   "name": "progpt",
   "version": "2.0.0",
   "description": "ChatGPT benzeri oturumsuz web uygulaması",
-  "main": "server.js",
-  "type": "module",
+  "main": "server.js",,
   "scripts": {
     "start": "node server.js"
   },
