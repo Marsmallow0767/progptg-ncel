@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -11,7 +12,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-const OPENAI_API_KEY = "BURAYA_KENDI_API_KEYINI_YAZ"; // 🔑 OpenAI API anahtarını buraya yaz
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 // Ana sayfa
 app.get("/", (req, res) => {
