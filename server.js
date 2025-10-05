@@ -42,6 +42,7 @@ app.post("/api/chat", async (req, res) => {
 
     res.json({ reply: response.data.choices[0].message.content });
   } catch (err) {
+    console.error(err.response?.data || err.message);
     res.status(500).json({ error: "Cevap alınamadı." });
   }
 });
@@ -53,9 +54,9 @@ app.post("/api/image", async (req, res) => {
     const response = await axios.post(
       "https://api.openai.com/v1/images/generations",
       {
-        model: "gpt-image-1",
+        model: "dall-e-3",   // ✅ gpt-image-1 yerine dall-e-3
         prompt,
-        size: "512x512"
+        size: "1024x1024"    // ✅ Daha kaliteli çözünürlük
       },
       {
         headers: {
@@ -67,6 +68,7 @@ app.post("/api/image", async (req, res) => {
 
     res.json({ imageUrl: response.data.data[0].url });
   } catch (err) {
+    console.error(err.response?.data || err.message);
     res.status(500).json({ error: "Görsel oluşturulamadı." });
   }
 });
