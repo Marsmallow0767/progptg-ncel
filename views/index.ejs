@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProGPT 13 Neon Chat</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- SOL MENÜ -->
+      <aside class="sidebar">
+        <button id="newChat">+ Yeni Sohbet</button>
+        <h2>Sohbetler</h2>
+        <ul id="chatHistory"></ul>
+      </aside>
+
+      <!-- ANA CHAT EKRANI -->
+      <main class="chat-area">
+        <div id="messages" class="messages"></div>
+
+        <!-- SAĞ ALTA KLAVYE -->
+        <div class="keyboard">
+          <input id="userInput" type="text" placeholder="Mesajınızı yazın..." />
+          <button id="sendBtn">Gönder</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
