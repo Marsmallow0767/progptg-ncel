@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #00111f, #000);
+  color: #fff;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #0a0022, #100030);
+  padding: 20px;
+  border-right: 2px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff66;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00ffff, #ff0055);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff88;
+}
+
+.sidebar h2 {
+  margin-top: 10px;
+  color: #00ffff;
+}
+
+#chatHistory {
+  list-style: none;
+  padding: 0;
+}
+
+#chatHistory li {
+  background: #111;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#chatHistory li:hover {
+  background: #222;
+}
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #010112, #000);
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.user {
+  background: #ff005588;
+  align-self: flex-end;
+}
+
+.bot {
+  background: #00ffff55;
+  align-self: flex-start;
+}
+
+.keyboard {
+  display: flex;
+  padding: 15px;
+  background: #050020;
+  border-top: 2px solid #00ffff;
+}
+
+.keyboard input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.keyboard button {
+  margin-left: 10px;
+  background: linear-gradient(90deg, #00ffff, #ff0055);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0055aa;
+}
